@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Doctor Consultation</title>
+  <style>
+    /* Main Body Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa; /* Light gray background for clean look */
+      color: #333; /* Dark text for readability */
+    }
+
+    /* Header Section */
+    header {
+      background-color: #007BFF; /* Trustworthy hospital blue */
+      color: white;
+      padding: 1em;
+      text-align: center;
+      border-bottom: 4px solid #0056b3; /* Darker blue for header border */
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.2em;
+    }
+
+    /* Container for the entire content */
+    .container {
+      padding: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    /* Form Section */
+    .form-section {
+      background-color: #ffffff; /* White background for form */
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+    }
+
+    .form-section h2 {
+      color: #007BFF;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input, textarea, select, button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #28a745; /* Green button to signify positive action */
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #218838; /* Darker green for button hover */
+    }
+
+    /* Doctors Section */
+    .doctors-section {
+      margin-top: 30px;
+    }
+
+    .doctor {
+      background-color: #ffffff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border: 1px solid #ddd;
+    }
+
+    .doctor h3 {
+      color: #007BFF;
+    }
+
+    .doctor p {
+      color: #555;
+    }
+
+    /* Footer Section */
+    footer {
+      background-color: #343a40; /* Dark footer for contrast */
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Online Doctor Consultation</h1>
+  <p>Book your appointment anytime, anywhere</p>
+</header>
+
+<div class="container">
+
+  <section class="form-section">
+    <h2>Book a Consultation</h2>
+    <form id="consultationForm">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="specialty">Choose Specialty:</label>
+      <select id="specialty" name="specialty" required>
+        <option value="">Select</option>
+        <option value="general">General Physician</option>
+        <option value="dermatology">Dermatologist</option>
+        <option value="cardiology">Cardiologist</option>
+        <option value="pediatrics">Pediatrician</option>
+      </select>
+
+      <label for="message">Describe Your Symptoms:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Book Appointment</button>
+    </form>
+  </section>
+
+  <section class="doctors-section">
+    <h2>Our Doctors</h2>
+    <div class="doctor">
+      <h3>Dr. Sarah Johnson</h3>
+      <p>General Physician with 5 years of experience</p>
+    </div>
+    <div class="doctor">
+      <h3>Dr. Alan Smith</h3>
+      <p>Dermatologist specializing in skin disorders</p>
+      <p>7 years of experience</p>
+    </div>
+    <div class="doctor">
+      <h3>Dr. Priya Patel</h3>
+      <p>Cardiologist with expertise in heart health</p>
+      <p>10+ years experience</p>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <h2>Contact Us</h2>
+    <p>Email: Alliswell@healthclinic.com</p>
+    <p>Phone: +91 9385976500</p>
+  </section>
+
+</div>
+
+<footer>
+  <p>&copy; 2025 Online Doctor Consultation. All rights reserved.</p>
+</footer>
+
+<script>
+  // JavaScript to handle form submission and show alert message
+  document.getElementById('consultationForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevents the default form submission
+
+    // Show alert message
+    alert("Your appointment has been booked successfully!");
+
+    // Optionally, reset the form after submission
+    document.getElementById('consultationForm').reset();
+  });
+</script>
+
+</body>
+</html>
